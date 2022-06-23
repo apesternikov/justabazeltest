@@ -1,0 +1,5 @@
+#build --@io_bazel_rules_go//go/config:pure
+#build --repository_cache=~/.cache/repository_cache
+build --incompatible_strict_action_env --action_env=PATH=/usr/local/bin:/bin:/usr/bin
+#build --remote_cache=grpc://localhost:2345 --remote_cache_proxy=unix:/tmp/rbazel
+test --test_output=errors
